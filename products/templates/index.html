@@ -442,7 +442,15 @@
        </div>
     </section>
     <!-- end subscribe section -->
-
+<script>
+   fetch('https://jsonplaceholder.typicode.com/todos/1')
+   .then(response => response.json())
+   .then(json => {
+      $('.heading_container').html(json.title)
+      console.log(json)
+   })
+      
+</script>
    
  </body>
  {% endblock %}
